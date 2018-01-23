@@ -13,13 +13,13 @@
   yum:
     name: http://www.elrepo.org/elrepo-release-6-8.el6.elrepo.noarch.rpm
   when:
-    - ansible_distribution == 'CentOS' or ansible_distribution == "Scientific" or ansible_distribution == 'Red Hat Enterprise Linux'
+    - ansible_os_family == "RedHat"
     - ansible_distribution_major_version == "6"
 
 - name: ELREPO package installed (CentOS 7 ver)
   yum:
     name: http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
   when:
-    - ansible_distribution == 'CentOS' or ansible_distribution == "Scientific" or ansible_distribution == 'Red Hat Enterprise Linux'
+    - ansible_os_family == "RedHat"
     - ansible_distribution_major_version == "7"
 ...
